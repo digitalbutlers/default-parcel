@@ -38,4 +38,4 @@ If you find an issue, please, inform us using [GitHub Issues](https://github.com
 ## License
 MIT
 
-Copyright © 2021 [DigitalButlers](https://digitalbutlers.me/)
+Copyright © 2021 [DigitalButlers](https://digitalbutlers.me/).
