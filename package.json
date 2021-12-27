@@ -1,12 +1,11 @@
 {
   "name": "default-db-template",
   "version": "1.1.0",
-  "main": "index.html",
   "description": "Default Digital Butlers config for html projects",
   "scripts": {
-    "serve": "del /q server && NODE_ENV=development parcel serve src/*.html --dist-dir server --port 3000",
-    "build": "del /q build && NODE_ENV=production parcel build src/*.html --no-cache --dist-dir build --public-url ./",
-    "build-no-minify": "del /q build && NODE_ENV=production parcel build src/index.html --no-minify --no-cache --dist-dir build --public-url ./",
+    "serve": "del /q server && NODE_ENV=development npx parcel src/*.html --dist-dir server --port 3000",
+    "build": "del /q build && NODE_ENV=production npx parcel build src/*.html --target default --dist-dir build --public-url ./",
+    "build-no-minify": "del /q build && NODE_ENV=production parcel build src/index.html --no-optimize --dist-dir build --public-url ./",
     "lint-js": "npx eslint src/**/*.js",
     "lint-js-fix": "npx eslint --fix src/**/*.js",
     "lint-scss": "npx stylelint src/**/*.scss",
@@ -25,6 +24,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.2",
     "parcel": "^2.0.1",
+    "parcel-namer-rewrite": "^2.0.0-rc.1",
     "parcel-plugin-custom-dist-structure": "^1.1.18",
     "parcel-plugin-imagemin": "^4.0.2",
     "parcel-plugin-static-files-copy": "^2.6.0",
@@ -32,6 +32,8 @@
     "postcss": "^8.3.11",
     "postcss-sass": "^0.5.0",
     "postcss-scss": "^4.0.2",
+    "posthtml-include": "^1.7.2",
+    "posthtml-shorten": "^1.0.0",
     "sass": "^1.32.13",
     "sharp": "^0.29.3",
     "stylelint": "^14.1.0",
@@ -42,65 +44,7 @@
     "stylelint-scss": "^4.0.0",
     "win-node-env": "^0.4.0"
   },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {
-        "overrideBrowserslist": [
-          "> 1%",
-          "last 4 versions",
-          "ie >= 9"
-        ]
-      }
-    }
-  },
-  "cssnano": {
-    "preset": [
-      "default",
-      {
-        "minifyFontValues": {
-          "removeQuotes": false
-        },
-        "normalizeUrl": false
-      }
-    ]
-  },
-  "babel": {
-    "plugins": [
-      [
-        "@babel/plugin-transform-runtime",
-        {
-          "corejs": 2,
-          "regenerator": true
-        }
-      ]
-    ]
-  },
-  "customDistStructure": {
-    "config": {
-      ".css": "styles",
-      ".css.map": "styles",
-      ".js": "scripts",
-      ".js.map": "scripts",
-      "fonts": [
-        ".ttf",
-        ".otf",
-        ".woff",
-        ".woff2",
-        ".eot"
-      ],
-      "images": [
-        ".jpg",
-        ".png",
-        ".svg",
-        ".gif",
-        ".ttf",
-        ".bmp"
-      ]
-    },
-    "options": {
-      "development": true
-    }
-  },
+
   "staticFiles": {
     "staticPath": [
       {
@@ -114,17 +58,5 @@
     ],
     "watcherGlob": "**"
   },
-  "htmlnano": {
-    "collapseAttributeWhitespace": false,
-    "collapseBooleanAttributes": false,
-    "collapseWhitespace": false,
-    "minifyJson": false,
-    "minifySvg": false
-  },
-  "parcelIgnore": [],
-  "dependencies": {
-    "assemble": "^0.3.83",
-    "grunt": "^0.4.5",
-    "styles": "^0.2.1"
-  }
+  "parcelIgnore": []
 }
