@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "del /q server && NODE_ENV=development npx parcel src/*.html --dist-dir server --port 3000",
     "build": "del /q build && NODE_ENV=production npx parcel build src/*.html --target default --dist-dir build --public-url ./",
-    "build-no-minify": "del /q build && NODE_ENV=production parcel build src/index.html --no-optimize --dist-dir build --public-url ./",
+    "build-no-minify": "del /q build && NODE_ENV=production parcel build src/*.html --no-optimize --dist-dir build --public-url ./",
     "lint-js": "npx eslint src/**/*.js",
     "lint-js-fix": "npx eslint --fix src/**/*.js",
     "lint-scss": "npx stylelint src/**/*.scss",
