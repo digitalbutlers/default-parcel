@@ -1,52 +1,52 @@
 {
-  "name": "default-db-template",
-  "version": "1.1.0",
-  "description": "Default Digital Butlers config for html projects",
-  "scripts": {
-    "serve": "del /q server && NODE_ENV=development npx parcel src/*.html --dist-dir server --port 3000",
-    "build": "del /q build && NODE_ENV=production npx parcel build src/*.html --target default --dist-dir build --public-url ./",
-    "build-no-minify": "del /q build && NODE_ENV=production parcel build src/*.html --no-optimize --dist-dir build --public-url ./",
-    "lint-js": "npx eslint src/**/*.js",
-    "lint-js-fix": "npx eslint --fix src/**/*.js",
-    "lint-scss": "npx stylelint src/**/*.scss",
-    "lint-scss-fix": "npx stylelint --fix src/**/*.scss"
-  },
+	"name": "default-db-template",
+	"version": "1.1.0",
+	"description": "Default Digital Butlers config for html projects",
+	"scripts": {
+		"serve": "del /q server && NODE_ENV=development npx parcel src/*.html --dist-dir server --port 3000",
+		"build": "del /q build && NODE_ENV=production npx parcel build src/*.html --target default --dist-dir build --public-url ./",
+		"build-no-minify": "del /q build && NODE_ENV=production parcel build src/*.html --no-optimize --dist-dir build --public-url ./",
+		"lint-js": "npx eslint src/**/*.js",
+		"lint-js-fix": "npx eslint --fix src/**/*.js",
+		"lint-scss": "npx stylelint src/**/*.scss",
+		"lint-scss-fix": "npx stylelint --fix src/**/*.scss"
+	},
 	"engines": {
 		"node": "16.15.0"
 	},
 	"keywords": [],
-  "author": "kirillsakun",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.14.0",
-    "@babel/plugin-transform-runtime": "^7.13.15",
-    "@babel/runtime-corejs2": "^7.9.2",
-    "@parcel/transformer-sass": "^2.0.1",
-    "autoprefixer": "^9.7.1",
-    "eslint": "^8.15.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-unicorn": "^42.0.0",
-    "parcel": "^2.0.1",
-    "parcel-namer-rewrite": "^2.0.0-rc.2",
-    "parcel-plugin-imagemin": "^4.0.2",
-    "parcel-plugin-static-files-copy": "^2.6.0",
-    "parcel-resolver-ignore": "^1.0.2",
-    "postcss": "^8.3.11",
-    "postcss-sass": "^0.5.0",
-    "postcss-scss": "^4.0.2",
-    "posthtml-include": "^1.7.2",
-    "posthtml-shorten": "^1.0.0",
-    "sass": "^1.32.13",
-    "sharp": "^0.29.3",
+	"author": "kirillsakun",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.14.0",
+		"@babel/plugin-transform-runtime": "^7.13.15",
+		"@babel/runtime-corejs2": "^7.9.2",
+		"@parcel/transformer-sass": "^2.0.1",
+		"autoprefixer": "^9.7.1",
+		"eslint": "^8.15.0",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-unicorn": "^42.0.0",
+		"parcel": "^2.0.1",
+		"parcel-namer-rewrite": "^2.0.0-rc.2",
+		"parcel-plugin-imagemin": "^4.0.2",
+		"parcel-plugin-static-files-copy": "^2.6.0",
+		"parcel-resolver-ignore": "^1.0.2",
+		"postcss": "^8.3.11",
+		"postcss-sass": "^0.5.0",
+		"postcss-scss": "^4.0.2",
+		"posthtml-include": "^1.7.2",
+		"posthtml-shorten": "^1.0.0",
+		"sass": "^1.32.13",
+		"sharp": "^0.29.3",
 		"stylelint": "^14.8.5",
 		"stylelint-color-format": "^1.1.0",
 		"stylelint-config-idiomatic-order": "^8.1.0",
 		"stylelint-config-recommended": "^7.0.0",
 		"stylelint-scss": "^4.2.0",
 		"stylelint-use-logical-spec": "^4.0.0",
-    "win-node-env": "^0.4.0"
-  },
+		"win-node-env": "^0.4.0"
+	},
 	"parcel-namer-rewrite": {
 		"chain": "@parcel/namer-default",
 		"rules": {
@@ -57,18 +57,18 @@
 			"(.*)\\.(js)": "scripts/$1{~hash}.$2"
 		}
 	},
-  "staticFiles": {
-    "staticPath": [
-      {
-        "staticPath": "static/",
-        "env": "development"
-      },
-      {
-        "staticPath": "static/",
-        "env": "production"
-      }
-    ],
-    "watcherGlob": "**"
-  },
-  "parcelIgnore": []
+	"staticFiles": {
+		"staticPath": [
+			{
+				"staticPath": "static/",
+				"env": "development"
+			},
+			{
+				"staticPath": "static/",
+				"env": "production"
+			}
+		],
+		"watcherGlob": "**"
+	},
+	"parcelIgnore": []
 }
