@@ -11,7 +11,10 @@
     "lint-scss": "npx stylelint src/**/*.scss",
     "lint-scss-fix": "npx stylelint --fix src/**/*.scss"
   },
-  "keywords": [],
+	"engines": {
+		"node": "16.15.0"
+	},
+	"keywords": [],
   "author": "kirillsakun",
   "license": "ISC",
   "devDependencies": {
