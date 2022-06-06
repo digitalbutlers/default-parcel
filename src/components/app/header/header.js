@@ -1,5 +1,5 @@
 import './header.scss';
-import test from '../../../../public/test.json';
+import test from '../../../../static/test.json';
 
 
 // scope to avoid conflicts
