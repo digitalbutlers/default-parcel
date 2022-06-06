@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: {
-    'posthtml-include': {},
-  },
+	plugins: {
+		'posthtml-include': {},
+	},
 };
