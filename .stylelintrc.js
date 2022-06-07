@@ -8,7 +8,7 @@ module.exports = {
 		'stylelint-config-recommended',
 		'stylelint-config-idiomatic-order',
 	],
-  customSyntax: 'postcss-scss',
+	customSyntax: 'postcss-scss',
 	rules: {
 		indentation: 'tab',
 		'string-quotes': 'double',
@@ -22,15 +22,15 @@ module.exports = {
 		'font-weight-notation': 'numeric',
 		'font-family-name-quotes': 'always-unless-keyword',
 		'color-format/format': {
-			'format': 'hsla',
+			format: 'hsla',
 		},
 		'color-named': 'never',
 		'length-zero-no-unit': true,
 		'number-max-precision': [
 			2,
 			{
-				ignoreUnits: ['em', 'rem']
-			}
+				ignoreUnits: ['em', 'rem'],
+			},
 		],
 		'declaration-block-single-line-max-declarations': 1,
 		'declaration-block-no-shorthand-property-overrides': true,
