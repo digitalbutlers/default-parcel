@@ -3,8 +3,8 @@
 	"version": "1.1.0",
 	"description": "Default Digital Butlers config for html projects",
 	"scripts": {
-		"serve": "del /q server && NODE_ENV=development npx parcel src/*.html --dist-dir server --port 3000",
-		"build": "del /q build && NODE_ENV=production npx parcel build src/*.html --target default --dist-dir build --public-url ./",
+		"serve": "npx cf server && NODE_ENV=development npx parcel src/*.html --dist-dir server --port 3000",
+		"build": "npx cf build && NODE_ENV=production npx parcel build src/*.html --target default --dist-dir build --public-url ./",
 		"build-no-minify": "del /q build && NODE_ENV=production parcel build src/*.html --no-optimize --dist-dir build --public-url ./",
 		"lint-js": "npx eslint src/**/*.js",
 		"lint-js-fix": "npx eslint --fix src/**/*.js",
@@ -23,6 +23,7 @@
 		"@babel/runtime-corejs2": "^7.9.2",
 		"@parcel/transformer-sass": "^2.0.1",
 		"autoprefixer": "^9.7.1",
+		"clear-folder": "^3.2.1",
 		"eslint": "^8.15.0",
 		"eslint-config-airbnb-base": "^14.2.1",
 		"eslint-plugin-import": "^2.25.2",
